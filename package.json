@@ -8,18 +8,36 @@
     "url": "https://github.com/pagetailoring/geo-distance--app"
   },
   "type": "module",
+  "license": "MIT",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "build": "nuxi build",
+    "clean": "nuxi cleanup && nuxi prepare",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
+    "host": "nuxi dev --host",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "postinstall": "nuxi prepare",
+    "preview": "nuxi preview",
+    "ts": "nuxi typecheck",
+    "up": "nuxi upgrade"
   },
   "dependencies": {
-    "@nuxt/eslint": "1.4.1",
+    "@nuxt/eslint": "^1.4.1",
     "@nuxt/fonts": "0.11.4",
+    "@vueuse/nuxt": "13.3.0",
     "nuxt": "^3.17.4",
     "vue": "^3.5.15",
     "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/html-validator": "^2.1.0",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.1",
+    "prettier": "^3.5.3",
+    "sass": "^1.89.1",
+    "typescript": "^5.8.3",
+    "vue-tsc": "^2.2.10"
   }
 }

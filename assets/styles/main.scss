@@ -1,0 +1,12 @@
+@use 'config';
+@use 'form';
+
+html {
+  font-size: 112.5%; // default rem 18px
+}
+
+body {
+  font-family: 'Prompt', sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+}

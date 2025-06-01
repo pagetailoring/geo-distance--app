@@ -5,5 +5,8 @@ export default withNuxt({
   files: ['**/*.ts', '**/*.tsx', '**/*.vue'],
   rules: {
     'no-console': 'off',
+
+    'vue/max-attributes-per-line': 'off',
+    'vue/html-self-closing': 'off',
   },
 })

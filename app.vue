@@ -1,5 +1,7 @@
+<script setup lang="ts"></script>
+
 <template>
   <div id="__app">
-    <p>helo</p>
+    <TheMainForm />
   </div>
 </template>

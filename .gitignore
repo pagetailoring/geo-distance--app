@@ -6,6 +6,8 @@
 .cache
 dist
 
+.vscode
+
 # Node dependencies
 node_modules
 
@@ -24,4 +26,4 @@ logs
 !.env.example
 
 # dev notes
-*___dev*
+*__dev*

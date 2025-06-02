@@ -1,12 +1,14 @@
+@use 'global/reset';
+
 @use 'config';
-@use 'form';
+@use 'colors';
+@use 'typo'; // typography
 
-html {
-  font-size: 112.5%; // default rem 18px
-}
-
-body {
-  font-family: 'Prompt', sans-serif;
-  color: var(--text);
-  background-color: var(--bg);
-}
+@use 'global/body';
+@use 'global/buttons-and-links';
+@use 'global/card';
+@use 'global/dialog';
+@use 'global/font';
+@use 'global/form';
+@use 'global/grid';
+@use 'global/validation';

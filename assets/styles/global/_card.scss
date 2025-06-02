@@ -1,0 +1,47 @@
+@use 'body';
+
+.border {
+  @extend .radius;
+  border: 1px solid var(--border);
+}
+
+.card {
+  @extend .border;
+  @extend .bg;
+
+  position: relative;
+
+  padding: var(--my);
+  margin-block: var(--my);
+}
+
+.result {
+  @extend .card;
+
+  p {
+    margin: 0;
+    text-align: right;
+  }
+}
+
+.info {
+  p {
+    opacity: 0.7;
+    line-height: 1.2;
+  }
+}
+
+.mobile-hide {
+  @media (width <= 24em) {
+    display: none;
+  }
+}
+
+.alert.card {
+  display: flex;
+  justify-content: space-between;
+
+  .two {
+    justify-self: flex-start;
+  }
+}

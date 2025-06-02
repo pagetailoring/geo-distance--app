@@ -1,0 +1,30 @@
+:root {
+  --rgb: 59, 170, 220;
+  --brand-rgb: var(--rgb);
+  --accent-rgb: 100, 136, 247;
+  --brand: rgba(var(--rgb), 1); // #3baadc;
+  --accent: rgba(var(--accent-rgb), 1);
+
+  --border: rgba(var(--accent-rgb), 0.2);
+
+  --two: #222;
+  --one: #fff;
+  --bg-second: #f9f9f9;
+  --second: #495661;
+
+  --bg: var(--one);
+  --text: var(--two);
+
+  --error: rgb(255, 48, 76);
+}
+
+.dark {
+  --bg: var(--two);
+  --text: var(--one);
+  --second: #8498a5;
+  --border: rgba(var(--accent-rgb), 0.1);
+  --bg-second: #111;
+  --error: #feb253;
+
+  color-scheme: dark;
+}

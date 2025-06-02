@@ -1,0 +1,11 @@
+# for OVH hosting
+<FilesMatch "\.(js|svg|css)$">
+    Header set Cache-Control "max-age=31536000"
+</FilesMatch>
+<FilesMatch "\.(webp|jpg|woff2|png)$">
+    Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]

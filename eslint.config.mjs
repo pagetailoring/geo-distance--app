@@ -6,6 +6,12 @@ export default withNuxt({
   rules: {
     'no-console': 'off',
 
+    '@stylistic/brace-style': 'off',
+    '@stylistic/arrow-parens': 'off',
+    '@stylistic/comma-dangle': 'off',
+    '@stylistic/operator-linebreak': 'off',
+
+    'vue/singleline-html-element-content-newline': 'off',
     'vue/max-attributes-per-line': 'off',
     'vue/html-self-closing': 'off',
   },

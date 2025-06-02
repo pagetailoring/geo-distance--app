@@ -1,0 +1,50 @@
+@use 'body';
+@use 'grid';
+@use '../typo';
+
+input,
+button:not(.mode) {
+  padding: 0.3em 0.6em;
+}
+
+input,
+button {
+  @extend .radius;
+  @extend .text-center;
+
+  border-color: rgba(var(--brand-rgb), 0.5);
+  accent-color: var(--brand);
+}
+
+:focus-visible {
+  outline: var(--brand) auto 1px;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  letter-spacing: 0.05em;
+
+  &:not(:focus-visible) {
+    color: var(--second);
+  }
+}
+
+form,
+.group {
+  @extend .grid;
+}
+
+form {
+  gap: var(--mx);
+}
+
+.label {
+  margin-left: var(--mx);
+  margin-bottom: 0.1em;
+  opacity: 0.7;
+}

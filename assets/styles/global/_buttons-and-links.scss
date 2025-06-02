@@ -1,0 +1,82 @@
+@use '../typo';
+
+.git,
+button,
+.mode {
+  @extend .bg;
+  border-color: rgba(var(--brand-rgb), 0.8);
+  color: var(--brand);
+
+  transition:
+    background-color var(--ease),
+    opacity var(--ease),
+    color var(--ease);
+
+  &:not(.lock):hover {
+    background-color: var(--brand);
+    color: var(--bg);
+  }
+}
+
+.solid {
+  background-color: var(--brand);
+  color: var(--bg);
+
+  &:not(.lock):hover {
+    background-color: var(--bg);
+    color: var(--brand);
+  }
+}
+
+.lock {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.square {
+  aspect-ratio: 1;
+}
+
+:root {
+  --btn-md: 2rem;
+}
+
+.git,
+.mode {
+  @extend .square;
+  position: fixed;
+  top: var(--mx);
+  width: var(--btn-md);
+  height: var(--btn-md);
+}
+
+.mode {
+  right: var(--mx);
+}
+
+.git {
+  border: solid 1px;
+  @extend .radius;
+  right: calc(var(--mx) * 2 + var(--btn-md));
+}
+
+.gps {
+  @extend .square;
+}
+
+a:has(svg),
+button:has(svg) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+
+  svg + span,
+  svg + small {
+    margin-left: 0.3em;
+  }
+}

@@ -5,14 +5,17 @@ defineProps<{
   type?: string
 }>()
 
-const modelValue = defineModel<string>()
+const modelValue = defineModel<number>()
 </script>
 
 <template>
-  <div class="group">
-    <label :for="name">
-      <span>{{ label ? label : name }}</span>
-    </label>
-    <input v-bind="$attrs" :id="name" v-model="modelValue" :type="type ? type : 'text'" :name />
-  </div>
+  <input
+    v-bind="$attrs"
+    :id="name"
+    v-model="modelValue"
+    :title="label"
+    :aria-label="label ? label : name"
+    :type="type ? type : 'number'"
+    :name
+  />
 </template>

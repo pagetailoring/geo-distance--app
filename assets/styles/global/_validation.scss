@@ -1,0 +1,76 @@
+input {
+  transition:
+    border-color var(--ease),
+    outline-color var(--ease),
+    color var(--ease);
+}
+
+.error input {
+  border-color: var(--error);
+  outline-color: var(--error);
+
+  &:focus-visible {
+    color: var(--error);
+  }
+}
+
+.alert {
+  &:not(.error) {
+    .one small {
+      display: none;
+    }
+  }
+
+  .one {
+    opacity: 0;
+    transition: opacity var(--ease);
+
+    small {
+      color: var(--error);
+    }
+  }
+
+  &.error > .one {
+    opacity: 1;
+  }
+}
+
+.error {
+  color: var(--error);
+}
+
+.test {
+  width: calc(var(--size) * 2.5);
+  position: absolute;
+  display: flex;
+  color: var(--second);
+
+  height: var(--size);
+  bottom: var(--my);
+  gap: var(--mx);
+
+  & > div {
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+  }
+
+  svg {
+    position: absolute;
+  }
+
+  &,
+  svg {
+    transition: opacity var(--ease);
+  }
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,30 @@
+@use 'buttons-and-links';
+@use 'body';
+
+.dialog {
+  @extend .radius;
+
+  width: clamp(30rem, 60vw, 98vw);
+  height: clamp(30rem, 60vh, 98vh);
+  border-color: var(--brand);
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+
+  &::backdrop {
+    background: var(--bg);
+    opacity: 0.7;
+  }
+}
+
+.close {
+  @extend .solid;
+  position: absolute;
+  top: var(--mx);
+  right: var(--mx);
+  z-index: 10;
+  --s: 2rem;
+  width: var(--s);
+  height: var(--s);
+  padding: 0;
+}

@@ -2,13 +2,17 @@
 // Styles are available during development and ✖️ EXCLDDED from production build ✖️
 
 .red {
-  outline: 1ps dashed rgba(255, 0, 0, 0.4);
+  outline: 1px dashed rgba(255, 0, 0, 0.4);
 
   * {
-    outline: 1ps dotted rgba(0, 255, 0, 0.2);
+    outline: 1px dotted rgba(0, 255, 0, 0.2);
   }
 
   & > * {
-    outline: 1ps dotted rgba(0, 0, 255, 0.4);
+    outline: 1px dotted rgba(0, 0, 255, 0.4);
   }
 }
+
+// .card * {
+//   outline: 1px dotted rgba(0, 255, 0, 1);
+// }

@@ -7,9 +7,19 @@ whenever(c, () => (shift.value ? toggleDark() : null))
 </script>
 
 <template>
-  <ClientOnly>
-    <UiButton class="mode" @click="toggleDark()">
-      {{ isDark ? 'dark' : 'light' }}
-    </UiButton>
-  </ClientOnly>
+  <UiButton
+    class="mode"
+    title="shift + C"
+    :aria-label="isDark ? 'dark' : 'light'"
+    @click="toggleDark()"
+  >
+    <ClientOnly>
+      <template #fallback>
+        <SvgoMoon />
+      </template>
+
+      <SvgoMoon v-if="isDark" />
+      <SvgoSun v-else />
+    </ClientOnly>
+  </UiButton>
 </template>

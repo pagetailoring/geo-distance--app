@@ -1,0 +1,72 @@
+@use 'global/body';
+@use 'global/grid';
+
+/*
+* The typographic scale: Major third
+*/
+
+.xlg {
+  font-size: 1.5625rem;
+}
+.lg {
+  font-size: 1.25rem;
+}
+.rem {
+  font-size: 1rem;
+}
+.sm {
+  font-size: 0.8rem;
+}
+
+.up {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+html {
+  font-size: 100%; // default rem 16px
+}
+
+body {
+  font-family: 'Prompt', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+body,
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+  @extend .up;
+  width: fit-content;
+  color: var(--second);
+}
+
+.label,
+h2 {
+  @extend .sm;
+}
+
+h1,
+h3 {
+  margin-block: 0 1em;
+
+  @extend .bg;
+  @extend .rem;
+}
+
+h1 {
+  @extend .bg;
+  position: sticky;
+  top: var(--mx);
+  z-index: 2;
+}
+
+.text-center {
+  text-align: center;
+}

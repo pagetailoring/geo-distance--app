@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button {
+  font: inherit;
+  min-width: 0;
+  border-style: solid;
+  border-width: 1px;
+}
+
+h1,
+h2,
+h3,
+button {
+  margin: 0;
+  padding: 0;
+}

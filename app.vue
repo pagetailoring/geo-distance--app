@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
-
 <template>
   <div id="__app">
-    <TheMainForm />
+    <main>
+      <InfoCard />
+      <TheMainForm />
+    </main>
+
+    <LazyUiColorModeButton hydrate-on-idle />
+    <LazyUiGitHubLink hydrate-on-idle />
   </div>
 </template>

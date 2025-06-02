@@ -1,7 +1,7 @@
 {
   "name": "geo-distance--app",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "pagetailoring.com",
   "repository": {
     "type": "git",
@@ -13,6 +13,7 @@
     "build": "nuxi build",
     "clean": "nuxi cleanup && nuxi prepare",
     "dev": "nuxi dev",
+    "deploy": "nuxi generate && scp -rp -P 41556 .output/public/. kvzbeoc@sshcloud.cluster024.hosting.ovh.net:~/geo-distance--app",
     "generate": "nuxi generate",
     "host": "nuxi dev --host",
     "lint": "eslint .",
@@ -25,8 +26,10 @@
   "dependencies": {
     "@nuxt/eslint": "^1.4.1",
     "@nuxt/fonts": "0.11.4",
+    "@nuxtjs/leaflet": "1.2.6",
     "@vueuse/nuxt": "13.3.0",
     "nuxt": "^3.17.4",
+    "nuxt-svgo": "4.2.1",
     "vue": "^3.5.15",
     "vue-router": "^4.5.1"
   },

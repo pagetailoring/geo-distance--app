@@ -1,0 +1,38 @@
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+  gap: var(--mx);
+}
+
+.group {
+  column-gap: var(--mx);
+  // max-width: 24rem;
+  grid-template-columns: 3fr 3fr 1fr;
+
+  // input {
+  //   // grid-column: span 2;
+  // }
+}
+
+h3 {
+  padding-left: var(--mx);
+}
+
+.card:has(.group) {
+  padding-inline: var(--mx);
+}
+
+.label {
+  grid-column: span 3;
+}
+
+.group + .group {
+  margin-top: var(--my);
+}
+
+.options {
+  @extend .flex;
+}

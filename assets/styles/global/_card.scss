@@ -17,6 +17,7 @@
 
 .result {
   @extend .card;
+  padding-right: var(--mx);
 
   p {
     margin: 0;
@@ -40,6 +41,7 @@
 .alert.card {
   display: flex;
   justify-content: space-between;
+  padding-inline: var(--mx);
 
   .two {
     justify-self: flex-start;

@@ -53,8 +53,8 @@ onMounted(async () => {
         hydrate-on-idle
         @update="(val) => (pointA = val)"
       />
+
       <LazyOptionsMapPointPreview
-        hydrate-on-idle
         :point="pointA"
         :second="pointB"
         @update="(val) => (pointA = val)"
@@ -75,8 +75,8 @@ onMounted(async () => {
         @update-b="(val) => (pointB = val)"
         @update-a="(val) => (pointA = val)"
       />
+
       <LazyOptionsMapPointPreview
-        hydrate-on-idle
         :point="pointB"
         :second="pointA"
         @update="(val) => (pointB = val)"

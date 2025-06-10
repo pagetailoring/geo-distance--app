@@ -68,7 +68,13 @@ const attribution = '<a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
   </UiButton>
 
   <dialog ref="dialogRef" class="dialog">
-    <LMap v-if="isOpen" :zoom style="z-index: 1" :center>
+    <LMap
+      v-if="isOpen"
+      :zoom
+      style="z-index: 1"
+      :center
+      :use-global-leaflet="false"
+    >
       <LTileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         :attribution
